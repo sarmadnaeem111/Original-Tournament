@@ -320,7 +320,7 @@ function TournamentManagement() {
                       ? tournament.tournamentDate.toDate().toLocaleDateString() 
                       : 'N/A'}
                     {' '}
-                    {tournament.tournamentTime || ''}
+                    {tournament.tournamentTime ? new Date(`2000-01-01T${tournament.tournamentTime}`).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) : ''}
                   </td>
                   <td>Rs. {tournament.entryFee}</td>
                   <td>Rs. {tournament.prizePool}</td>
