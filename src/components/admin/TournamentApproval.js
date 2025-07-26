@@ -156,7 +156,7 @@ function TournamentApproval() {
                     <td>{tournament.creatorEmail || 'Unknown'}</td>
                     <td>
                       {tournament.tournamentDate ? formatDate(tournament.tournamentDate) : 'N/A'}
-                      {tournament.tournamentTime ? ' at ' + tournament.tournamentTime : ''}
+                      {tournament.tournamentTime ? ' at ' + new Date(`2000-01-01T${tournament.tournamentTime}`).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) : ''}
                     </td>
                     <td>Rs. {tournament.entryFee}</td>
                     <td>Rs. {tournament.prizePool}</td>
@@ -222,7 +222,7 @@ function TournamentApproval() {
                 </div>
                 <div className="col-md-6">
                   <p className="mb-1"><strong>Tournament Date:</strong> {selectedTournament.tournamentDate ? formatDate(selectedTournament.tournamentDate) : 'N/A'}</p>
-                  <p className="mb-1"><strong>Tournament Time:</strong> {selectedTournament.tournamentTime || 'N/A'}</p>
+                  <p className="mb-1"><strong>Tournament Time:</strong> {selectedTournament.tournamentTime ? new Date(`2000-01-01T${selectedTournament.tournamentTime}`).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) : 'N/A'}</p>
                 </div>
               </div>
               
