@@ -27,6 +27,10 @@ function Footer() {
               Email: sarmadnaeem222@gmail.com<br />
               {/* Discord: PUBGTournaments#1234 */}
             </p>
+             <p className="text-muted">
+              join on Discord: https://discord.gg/3gF5FM6S<br />
+              {/* Discord: PUBGTournaments#1234 */}
+            </p>
           </Col>
         </Row>
         <hr className="my-3 bg-secondary" />
