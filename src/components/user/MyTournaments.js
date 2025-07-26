@@ -117,7 +117,7 @@ function MyTournaments() {
                     <Card.Text>
                       <strong>Date & Time:</strong> {tournament.tournamentDate?.toDate 
                         ? tournament.tournamentDate.toDate().toLocaleDateString() 
-                        : 'N/A'} {tournament.tournamentTime || ''}
+                        : 'N/A'} {tournament.tournamentTime ? new Date(`2000-01-01T${tournament.tournamentTime}`).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) : ''}
                       <br />
                       <strong>Entry Fee:</strong> Rs. {tournament.entryFee}
                       <br />
