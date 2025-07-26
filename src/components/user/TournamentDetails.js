@@ -118,7 +118,7 @@ function TournamentDetails() {
                   ? tournament.tournamentDate.toDate().toLocaleDateString() 
                   : 'N/A'}
                 <br />
-                <strong>Time:</strong> {tournament.tournamentTime || 'N/A'}
+                <strong>Time:</strong> {tournament.tournamentTime ? new Date(`2000-01-01T${tournament.tournamentTime}`).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) : 'N/A'}
                 <br />
                 <strong>Entry Fee:</strong> Rs. {tournament.entryFee}
                 <br />
